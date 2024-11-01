@@ -3,10 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
+  <style>
+    a{
+      /*인라인 속성과 블록 속성 함께 가짐*/
+      display: inline-block;
+      text-decoration: none;
+      background-color: darkslategray;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    a:hover{
+      background-color: steelblue;
+      transform: scale(1.05);
+    }
+    img{
+      background-color: white;
+      width: 200px;
+      height: auto;
+      border: 1px solid black;
+      padding: 10px;
+      margin: 10px;
+    }
+    /*  a태그 밑의 이미지 a > img */
+  </style>
 </head>
 <body>
 <!-- a 태그는 HTML 에서 내부나 외부 링크를 생성-->
-<a href="https://google.co.kr" target="_blank">구글페이지로 이동</a>
+<a href="https://google.co.kr" target="_blank">
+  <img src="/img/google_logo.png" alt="구글로고" />
+</a>
 <a href="https://naver.com" target="_blank">네이버로 이동</a>
+<br>
+<!-- 이미지 태그 -->
+<img src="/img/bear.png" alt ="곰돌이 이미지 없음" />
+
+<p>이 시설은 <strong>관계자 외 출입금지</strong>입니다.</p>
+<p>여기서부터는 위험하니까 <em>절대로</em> 지나가지 마세요.</p>
+
 </body>
 </html>
