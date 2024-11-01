@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .container{
+      width: 520px;
+      border: 2px solid #000;
+      padding: 20px 40px;
+      margin: 20px auto;
+    }
+    body{
+      margin: 0;
+    }
+    div{
+      margin-left: 40px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>프론트앤드 개발자 지원서</h1>
+  <p>HTML, CSS, Javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.</p>
+  <hr/>
+  <form action="#">
+    <b>개인정보</b>
+    <div class="input">
+      <label for="name">이름</label>
+      <input type="text" name="name" id="name" placeholder="공백없이 입력하세요."/>
+      <br/>
+      <label for="phone">연락처</label>
+      <input type="tel" name="phone" id="phone" />
+    </div>
+    <b>지원 분야</b>
+    <div class="input">
+      <input type="radio" name="dept" id="publish" />
+      <label for="publish">웹 퍼블리싱</label>
+      <br/>
+      <input type="radio" name="dept" id="frontend" />
+      <label for="frontend">웹 프론트앤드</label>
+      <br/>
+      <input type="radio" name="dept" id="app" />
+      <label for="app">모바일 앱</label>
+    </div>
+    <b>지원동기</b>
+    <textarea cols="70" rows="7" name="motive"></textarea>
+    <input type="submit" value="접수하기">
+    <input type="reset" value="다시쓰기">
+  </form>
+</div>
+
+</body>
+</html>

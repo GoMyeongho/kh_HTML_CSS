@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    #button button, input{
+      margin: 5px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #button{
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+<!-- 라디오 타입 : 여러항목중 하나만 선택-->
+<form action="#" method="get">
+  <label for="male">남성</label>
+  <input type="radio" name="gender" id="male" value="남자" />
+  <label for="female">여성</label>
+  <input type="radio" name="gender" id="female" value="여자" />
+</form>
+
+<!-- 체크 박스 : 여러항목중 여러개 선택-->
+<form action="#" method="get">
+  <label for="apple">사과</label>
+  <input type="checkbox" name="apple" id="apple" value="apple">
+  <label for="banana">바나나</label>
+  <input type="checkbox" name="banana" id="banana" value="banana">
+  <label for="melon">멜론</label>
+  <input type="checkbox" name="melon" id="melon" value="melon">
+</form>
+
+<!--fieldset 과 legend 태그-->
+<form action="#">
+  <fieldset>
+    <legend>기본 정보</legend>
+    <p>
+      <label for="userid">아이디</label>
+      <input type="text" id="userid">
+    </p>
+    <p>
+      <label for="userpw">비밀번호</label>
+      <input type="text" id="userpw">
+    </p>
+    <p>
+      <label for="desc">내용</label>
+      <textarea name="desc" id="desc"></textarea>
+    </p>
+  </fieldset>
+</form>
+
+<!--콤보 박스 사용하기-->
+<form action="#">
+  <fieldset>
+    <legend>개인정보 입력</legend>
+    <label for="city">지역</label>
+    <select name="city" id="city">
+      <optgroup label="서울시">
+        <option value="강북구">강북구</option>
+        <option value="강남구">강남구</option>
+        <option value="서초구">서초구</option>
+      </optgroup>
+      <optgroup label="경기도 성남시">
+        <option value="중원구">중원구</option>
+        <option value="분당구">분당구</option>
+      </optgroup>
+    </select>
+    <input type="submit" value="등록">
+  </fieldset>
+</form>
+<form action="https://facebook.com" id="button">
+  <input type="submit" name="" id=" " />
+  <input type="reset" name="" id="" />
+  <button type="submit">
+    <img src="/img/facebook.png" alt="페이스북 아이콘"/>
+    페이스북 등록
+  </button>
+</form>
+<br>
+<input type="text" placeholder="비활성" disabled />
+<input type="text" placeholder="읽기전용" readonly />
+<input type="text" placeholder="필수입력" required />
+
+<form action="#">
+  <fieldset>
+    <legend>좋아하는 과일</legend>
+    <input type="checkbox" id="banana2" name="banana" value="banana">
+    <label for="banana2">banana</label><br>
+    <input type="checkbox" id="apple2" name="apple" value="apple">
+    <label for="apple2">apple</label><br>
+    <input type="checkbox" id="orange" name="orange" value="orange"  checked>
+    <label for="orange">orange</label><br>
+  </fieldset>
+</form>
+
+
+
+
+</body>
+</html>

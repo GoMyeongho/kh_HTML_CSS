@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="/css/clonePage.css">
+</head>
+<body>
+
+<div class="menu-toggle">
+  <button id="toggleButton" onclick="toggleMenu()" class="logo">메뉴</button>
+  <div id="menuContainer" style="display: none; overflow: hidden;">
+    <div class="menu-content">
+      <button id="menu1">메뉴 1</button>
+      <button id="menu2">메뉴 2</button>
+      <button id="menu3">메뉴 3</button>
+      <button id="menu4">메뉴 4</button>
+      <button id="menu5">메뉴 5</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleMenu() {
+    const menuContainer = document.getElementById('menuContainer')
+    const menuIds = ['menu1', 'menu2', 'menu3', 'menu4', 'menu5'];
+    const menu = Object.fromEntries(menuIds.map(id => [id, document.getElementById(id)]));
+    const toggleButton = document.getElementById('toggleButton');
+
+    // 카테고리 컨테이너의 표시 상태 토글
+    if (menuContainer.style.display === 'none') {
+      menuContainer.style.display = 'flex'; // flex로 변경하여 수평 정렬
+      menuIds.forEach((id, index) => {
+        setTimeout(() => {
+          menu[id].classList.add(id); // 각 요소에 id를 클래스로 추가
+        }, index * 10); // 각 요소에 지연 시간 추가
+      });
+    } else {
+      menuIds.forEach((id, index) => {
+        setTimeout(() => {
+          menu[id].classList.remove(id); // 각 요소에 id를 클래스로 추가
+        }, index * 10); // 각 요소에 지연 시간 추가
+      });
+      setTimeout(() => {
+        menuContainer.style.display = 'none'; // display 속성 숨김
+      }, 300); // 애니메이션이 끝난 후 숨김
+       // 오른쪽으로 이동하는 클래스 제거
+    }
+  }
+</script>
+
+</body>
+</html>
